@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Blocks | A Minimal Book Example</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Blocks | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Blocks | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="John Doe" />
+
+
+<meta name="date" content="2022-11-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="footnotes-and-citations.html"/>
+<link rel="next" href="sharing-your-book.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
+<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
+<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
+<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
+<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
+<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="blocks" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Blocks<a href="blocks.html#blocks" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="equations" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Equations<a href="blocks.html#equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here is an equation.</p>
+<p><span class="math display" id="eq:binom">\[\begin{equation}
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \tag{6.1}
+\end{equation}\]</span></p>
+<p>You may refer to using <code>\@ref(eq:binom)</code>, like see Equation <a href="blocks.html#eq:binom">(6.1)</a>.</p>
+</div>
+<div id="theorems-and-proofs" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Theorems and proofs<a href="blocks.html#theorems-and-proofs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Labeled theorems can be referenced in text using <code>\@ref(thm:tri)</code>, for example, check out this smart theorem <a href="blocks.html#thm:tri">6.1</a>.</p>
+<div class="theorem">
+<p><span id="thm:tri" class="theorem"><strong>Theorem 6.1  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the <em>length</em> of the hypotenuse
+and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the <strong>other</strong> two sides, we have
+<span class="math display">\[a^2 + b^2 = c^2\]</span></p>
+</div>
+<p>Read more here <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html" class="uri">https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html</a>.</p>
+</div>
+<div id="callout-blocks" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Callout blocks<a href="blocks.html#callout-blocks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Den Haag, mijn stad
+Korte geschiedenis van Den Haag</p>
+<p>Van boerenhof tot Binnenhof</p>
+<p>De oudste “Hagenaars” waren boeren. Ze woonden in wat nu de nieuwste wijk van Den Haag is, Ypenburg. Deze paaltjes zijn geplaatst op de plekken waar archeologen in de bodem verkleuringen hebben gevonden. Zo krijgen we een idee van de grootte van hun woning. Bij de “boerderij” staan drie bronzen beelden van de eerste boeren.</p>
+<p>De zee geeft en de zee neemt. 6000 jaar geleden lag bijna heel Den Haag nog in zee. De kust lag bij Ypenburg. Pas 1000 jaar geleden lag de kust waar die nu nog steeds ligt.</p>
+<p>In het Museon is een expositie ingericht over de oudste bewoners van Den Haag. De reconstructies van de vroege Ypenburgers zijn gemaakt door Maja d’Hollosy.</p>
+<p>De eerste Hagenaars waren Ypenburgers</p>
+<p>5800 jaar geleden tot 0: Prehistorie van Den Haag</p>
+<p>Rond 6000 jaar geleden was er nog geen stad achter de duinen.
+Bijna alles van Den Haag lag onder het zoute water van de Noordzee.
+De kust liep langs Rijswijk, Voorburg en Leidschendam.
+Het gebied van de nieuwe wijk Ypenburg lag aan het strand.
+In de duinen woonde een groepje mensen.
+Deze mensen waren boeren die ook jaagden en visten.
+Ze verbouwden graan en hielden koeien en varkens.
+Ze hadden ook honden.
+Ze gebruikten gereedschappen zoals de bijl en ze jaagden met pijl en boog.
+Ook maakten ze zich mooi met kralenkettingen.
+En als ze stierven, werden ze begraven op één plaats.
+Het waren mensen als u en ik.
+Ze leefden honderden jaren op hetzelfde duin. Hoog en droog.
+Vaders, moeders en kinderen, families, jong en oud.
+Welke taal ze spraken, weten we niet.
+Ook hun namen kennen we niet.
+En ook niet welke religie ze hadden.
+Maar we weten wel ongeveer hoe ze eruit zagen.
+Drie schedels hebben een gezicht gekregen.
+Op de plek waar ze gevonden zijn, zijn hun hoofden in brons te zien.
+Kijk maar in het plantsoen bij Vuursteen in de wijk Ypenburg.</p>
+<p>In Leidschendam achter het oude centrum hebben archeologen een stuk van het verdwenen Kanaal van Corbulo gevonden en hersteld. De brug is een verkleinde replica van de brug over de Rijn bij Koblenz die in het jaar 55 is gebouwd door Julius Caesar.</p>
+<p>Gnaius Domitius Corbulo was een Romeinse veldheer die in het jaar 47 naar ons gebied kwam om het te verdedigen tegen de barbaren. Hij liet zijn mannen natuurlijke watertjes met elkaar verbinden. Zo ontstond een 35 kilometer lang kanaal tussen de Maas en de Rijn die toen veel noordelijker liep.</p>
+<p>Op deze plek in het Wateringse Veld aan het Oosteinde stonden vier Romeinse mijlpalen. Vanaf het Oosteinde liep de weg naar Forum Hadriani, een Romeinse stad aan de Vliet op de plaats van de huidige gemeente Voorburg.</p>
+<p>Den Haag, kolonie van de Romeinen
+0 tot 400: Romeinse tijd</p>
+<p>Wat er in deze regio gebeurde tot 2000 jaar geleden weten we niet.
+Er zijn altijd wel boeren geweest. De boeren hadden geen schrift. De Romeinen wel.
+De Romeinse keizer Julius Caesar veroverde heel Europa tot de rivier de Rijn.
+In ons gebied langs de kust woonden de Cananefaten.
+Het waren boeren die bevriend waren met de Romeinen.
+De jonge mannen deden dienst in hun legers.
+De belangrijkste stad in dit gebied heette Forum Hadriani, de marktplaats van keizer Hadrianus.
+Het lag aan het Kanaal van Corbulo, de voorloper van het kanaal de Vliet.
+Dit Romeinse kanaal liep van de Maas naar de Oude Rijn.
+De Rijn liep toen anders dan tegenwoordig.
+De Oude Rijn liep vanaf Utrecht via Leiden en bereikte bij Katwijk de Noordzee.
+In een plantsoen achter zorgcentrum Schoorwijck in Leidschendam is nog een stukje van het kanaal van Corbulo te zien.
+Van de Maas liep ook een Romeinse weg naar Forum Hadriani.
+Verschillende Romeinse wegen liepen door Den Haag en de regio.
+Aan de Scheveningseweg en op Ockenburg stonden Romeinse wachtposten.
+In het Wateringse Veld zijn vier Romeinse mijlpalen gevonden.
+Ze stonden bijna zes kilometer van de stad aan de Vliet vandaan.
+Na 270 is Forum Hadriani verlaten.
+De ruïnes liggen nu onder een park in het landgoed Arentsburg in Voorburg.
+De vermelding van de Cananefaten op de mijlpalen in Wateringse Veld is het laatste dat we van deze bewoners uit het kustgebied horen.
+In 406 trokken de Romeinen voorgoed uit Germanië weg.</p>
+<p>Ridderzaal/ Rolzaal</p>
+<p>De graven van Holland woonden eerst in Loosduinen. Daar is rond 1220 een nonnenklooster gebouwd. In 1574 is dit klooster afgebroken, maar de Abdijkerk staat er nog steeds. Dit is dus het oudste gebouw van Den Haag.</p>
+<p>In Den Haag daar woont een graaf
+En zijn zoon heet Jantje.
+Als je vraagt waar woont je pa,
+dan wijst hij met zijn handje,
+met zijn vingertje, met zijn duim,
+op zijn hoed draagt hij een pluim,
+aan zijn arm een mandje.
+Dag mijn lieve Jantje.</p>
+<p>Dit is een beroemd Nederlands kinderliedje,
+maar wie is Jantje?
+Antwoord: de zoon van Floris V, de graaf die waarschijnlijk de Ridderzaal liet bouwen. Floris werd vermoord in 1296. Zijn zoon die Jan heette was pas twaalf jaar. Ook voor hem liep het verhaal niet goed af. Drie jaar later stierf de nieuwe graaf.
+Het beeld is van Ivo Coljé en is geplaatst in 1976.</p>
+<p>In het Haagse stadswapen staat een ooievaar en dat al vijfhonderd jaar. Deze grote vogel is het symbool van Den Haag geworden. Elk jaar migreert hij tussen Afrika en Nederland. Vroeger waren er veel ooievaars in Den Haag. Vooral bij de vismarkt stonden ze graag.
+De oudst bekende afbeelding van de ooievaar in het Haagse wapen staat op de grote luidklok in de toren van de Grote Kerk: De klok stamt uit 1541. Eenzelfde wapen komt voor op een schilderij van de Hofvijver met zijn directe omgeving uit 1553, dat nu in het Haags Historisch Museum hangt.</p>
+<p>Het allereerste begin van Den Haag lag in Loosduinen</p>
+<p>1200-1500: Het hof en de haag van de graven</p>
+<p>De geschiedenis van Den Haag begint eigenlijk in Loosduinen.
+Hier hadden de graven van Holland een woning.
+In de duinen en op het veen woonden boeren en vissers.
+Het landschap bestond uit veel bos en was prima voor de jacht.
+Daarom kwamen de graven van Holland hier graag.
+Rond 1230 liet graaf Floris IV een huis bouwen op een duin.
+Dit huis lag langs de weg van Loosduinen naar Leiden.
+In 1248 werd de zoon van de graaf Willem II gekroond.
+Hij was rooms-koning van het Duitse rijk.
+Nu hij een belangrijke status had, liet hij bij dit huis een echt paleis bouwen.
+Dit was de Rolzaal.
+Later liet zijn zoon graaf Floris V de Ridderzaal bouwen.
+Met een kapel erbij was het Binnenhof geboren.
+Het dorp kreeg de naam Die Haghe.
+Haag betekent omheinde ruimte of jachtgebied.
+Het was de haag van de graaf, vandaar de naam: des Graven Hage, ’s Gravenhage.
+Floris V kwam graag in Den Haag. Het hof groeide snel.
+Ook het dorp bij het hof groeide.
+De graven hadden veel werk voor boeren, bakkers en timmerlieden.
+De edellieden woonden hoog en droog op het zand van de oude duinen, de strandwallen.
+De dorpelingen hadden hun huizen op het veen, de natte grond.
+Nu nog steeds is het verschil tussen zand en veen goed te zien.
+Het oude stadhuis bijvoorbeeld ligt hoog op de strandwal.
+De straten van de armeren liggen lager op het veen tussen de strandwallen.
+Binnenhof en buitenhof</p>
+<p>1500-1700</p>
+<p>Gravure Zeilwagen van Stevin</p>
+<p>Kaart van Haag uit 1616
+Rond 1600 had Den Haag nog geen stadsrechten en was eigenlijk een dorp. De Italiaanse reisschrijver Lodovico Guicciardini noemde Den Haag het mooiste en rijkste dorp van Europa. Hij vond het Voorhout met zijn schelpenpad en rijen lindebomen prachtig. Hagenaars vonden het heerlijk om hier te wandelen en te converseren. En dat vinden ze nog steeds.</p>
+<p>Gevelsteen Raamstraat 47</p>
+<p>Simon Stevin (1548-1620), de eerste “moderne” wetenschapper, woonde in de Raamstraat. Net als vele anderen uit de Zuidelijke Nederlanden (nu België) migreerde Simon Stevin naar de Republiek. Zijn motto was: Wonder en is geen wonder. Dat wil zeggen: als je een wonder goed bestudeert, dan begrijp je hoe het is ontstaan. Wonderen bestaan niet. Hij was een multitalent in de wetenschap (wiskunde en natuurkunde) en techniek. Hij heeft veel Nederlandse woorden bedacht, zoals wiskunde (voor mathematica), wijsbegeerte (voor filosofie), evenwijdig (voor parallel) en hij heeft de zeilwagen uitgevonden. Deze zeilboot op wielen reed in 1602 in twee uur naar Petten met een spectaculaire snelheid van veertig kilometer per uur. Het was een bijzondere rit. In de zeilwagen zaten onder meer Prins Maurits, de zoon en opvolger van Willem van Oranje en de vijftienjarige jurist Hugo de Groot die 24 gedichten over het wonder van de zeilwagen schreef.</p>
+<p>Den Haag regeringsstad</p>
+<p>1500 – 1600: Het begin van de Republiek</p>
+<p>Stadhouder Willem van Oranje (1533-1584) zei tegen de Staten-Generaal dat niemand mag heersen over het geweten, het geloof en de religie van mensen.
+Ook de Spaanse koning Filips II niet die over de Nederlanden heerste.
+Er kwam een tachtigjarige oorlog met Spanje die duurde tot 1648.
+De Staten-Generaal maakte zich los van Spanje en Nederland werd een republiek.
+De staat heette de Republiek der Zeven Verenigde Nederlanden.
+Vanaf 1578 was Den Haag de regeringsstad van de Republiek.
+En dat is Den Haag nog steeds.
+Prins Willem van Oranje nam de plaats in van de koning.
+Daarom heeft hij als bijnaam de Vader van het Vaderland.
+Hij heeft twee standbeelden in Den Haag.
+Voor het paleis op het Noordeinde zit hij op een paard en kijkt hij naar het koninklijk paleis.
+Op het Plein in het centrum van Den Haag staat hij naast zijn trouwe hond.
+Hij kijkt naar Delft waar hij woonde en in 1584 werd vermoord.
+In de periode van de Republiek kwamen veel andersdenkenden naar Den Haag.
+Hier konden ze relatief vrij leven, denken en werken.
+Voor het land was het prima, want deze mensen namen veel kennis mee.</p>
+<p>Zeestraat Vroeger</p>
+<p>Scheveningseweg (nu)
+De Zeestraat heet nu Scheveningseweg. Dit was het begin van de straat naar Scheveningen. Aan de rechterkant staat het vroegere tolhuis.</p>
+<p>Catshuis
+Zorgvliet heet nu het Catshuis en is de woning van de minister-president. Het is oorspronkelijk het buitenhuis van Jacob Cats (1577-1660). Net als Constantijn Huygens was Cats naast staatsman (raadspensionaris) ook dichter. Zijn gedichten waren eeuwenlang zo populair dat bijna iedere Nederlander wel een exemplaar van gedichten in huis had. Zorgvliet is een woordgrap: een vlucht voor de zorgen (van alledag).</p>
+<p>Borstbeeld Constantijn Huygens in de Scheveningse bosjes.</p>
+<p>Vader en zoon Huygens, twee genieën
+De Huygens familie was een bijzondere Haagse familie. Vader Huygens, zijn voornaam was Constantijn (1596-1687), was de secretaris van drie Oranje prinsen: Frederik Hendrik, Willem II en Willem III. Hij was een enorm veelzijdig mens: dichter, filosoof, schilder, componist, musicus, linguïst, architect en tuinarchitect en nog veel meer. Het beroemdste kind van Constantijn was Christiaan (1629-1695). Deze wetenschapper was een meester in de wiskunde, natuurkunde en sterrenkunde. Christiaan was de uitvinder van het slingeruurwerk. Met zijn eigen gemaakte telescoop ontdekte hij de ringen van Saturnus en de maan Titan. Met zijn theorie over het licht als golf was hij de wetenschap eeuwen vooruit.</p>
+<p>Veel statige buitenhuizen van rijke Hagenaars staan langs het kanaal de Vliet dat opnieuw is gegraven in de twaalfde eeuw. Het vierkante huis is Hofwijck. Constantijn Huygens ontwierp zijn eigen huis in de stad en ook dit buitenhuis. Hofwijck is een woordgrap: ontsnapping van het hof.</p>
+<p>Scheveningen en de Zeestraat</p>
+<p>Scheveningen en Den Haag zijn altijd met elkaar verbonden geweest.
+Scheveningen was al in de middeleeuwen een vissersdorp.
+Tussen het dorp en Den Haag was een breed en woest duinlandschap.
+Het vissersleven was niet makkelijk.
+De zee geeft en de zee neemt, zeggen de vissers.
+Veel vissers verdronken in zee als het stormde.
+Hun families hadden dan geen inkomsten.
+In 1653 had Constantijn Huygens, de secretaris van de stadhouder, een briljant idee:
+Er moet een geplaveide weg door de duinen komen.
+Daarmee zouden de “arme Scheveninger Slaven” sneller op de Haagse markt zijn met hun vis.
+Ook zag hij in dat het plan goed was voor Den Haag.
+Toeristen van over de hele wereld zouden dit wonder willen zien.
+Maar de bestuurders van Den Haag vonden het plan veel te ambitieus.
+Pas tien jaar later bedachten ze dat zo’n weg ook handig was voor militairen, als er een aanval zou komen uit zee.
+Op 5 december 1665, het was Sinterklaasavond, is de weg geopend.
+Huygens noemde de eerste “snelweg” van Europa de Zeestraat.
+Hij schreef er een lang gedicht over.
+Nu heet de straat de Scheveningseweg.
+Nog steeds even mooi als toen.
+Maar wel veel drukker.</p>
+<p>Gevangenpoort</p>
+<p>De Haagse kermis bestaat al sinds de veertiende eeuw.</p>
+<p>Spinoza
+De Republiek trok in de Gouden Eeuw veel migranten aan uit intolerante naties. De ouders van Baruch de Spinoza (1632-1677) waren joodse kooplieden die uit Portugal waren gevlucht. Baruch bracht zijn jeugd door in de Amsterdamse joodse gemeente, maar zijn ideeën waren al vroeg zo revolutionair dat de filosoof uit de gemeente werd gestoten. Hij heeft in Rijnsburg en Voorburg gewoond voordat hij naar Den Haag kwam. Eerst woonde hij aan de Stille Veerkade en later aan de Paviljoensgracht. Spinoza verdiende zijn geld met het slijpen van lenzen. Zijn ideeën formuleerde hij in zijn meesterwerk De Ethica dat zo revolutionair was dat het pas na zijn dood kon worden gepubliceerd. Net als Willem van Oranje, Hugo de Groot, Johan van Oldenbarnevelt, Constantijn en Christiaan Huygens, Johan en Cornelis de Witt geloofde Spinoza dat iedereen gelijk is en de vrijheid moet krijgen om te geloven, te denken en te zeggen wat hij of zij wil. Omdat de samenleving niet zo tolerant was, moest hij oppassen. Vandaar dat op zijn zegelring het woord Caute stond. Dat latijnse woord staat ook op zijn monument: Pas op!</p>
+<p>Het rampjaar 1672</p>
+<p>1670-1700: Het einde van de Gouden Eeuw</p>
+<p>Het jaar 1672 was een rampjaar voor de Republiek, een absoluut dieptepunt.
+De staat werd door alle buurlanden aangevallen.
+Het was oorlog en de Hagenaars verloren hun vertrouwen in de Staten-Generaal en in
+de Raadspensionaris Johan de Witt.
+Zijn broer Cornelis de Witt werd verdacht van een complot tegen prins Willem III van Oranje (1650-1702).
+Hij werd gevangen gehouden in de Gevangenpoort, maar hij was onschuldig.
+Het volk dacht dat hij wel schuldig was en stormde naar binnen.
+Johan was op bezoek bij zijn broer.
+Ze grepen de broers en sleepten hen naar buiten.
+Ze lynchten de broers en hingen de lijken aan het schavot.
+Daarna werd Willem III legeraanvoerder en later ook stadhouder.
+Door zijn militaire en diplomatieke optreden werd de vijand verslagen.
+In 1677 trouwde hij met zijn zestienjarige nichtje Maria II Stuart van het Engelse koningshuis.
+In 1689 werden Willem en Maria gekroond tot koning en koningin van Engeland.
+Vijf jaar later overleed Maria Stuart aan de pokken.
+Willem stierf in 1702 na de val van zijn paard.
+Na het rampjaar 1672 kwamen veel migranten naar Den Haag.
+Arme joden uit Polen en Duitsland vestigden zich rond de Nieuwe Kerk en bouwden een synagoge aan de Voldersgracht.
+Uit het katholieke Frankrijk vluchtten veel protestantse Hugenoten naar Den Haag.
+De welvaart, rijkdom en macht werden minder en de Gouden Eeuw in de Nederlanden liep ten einde.</p>
+<p>1899: op het bordes van Huis ten Bosch staan de leden van de eerste internationale vredesconferentie.</p>
+<p>Deelnemers aan de eerste Vredesconferentie vroegen de filantroop Andrew Carnegie of hij geld wilde geven voor de bouw van een tempel voor de vrede. Dit Vredespaleis, voltooid in 1913, werd een sprookjesachtig gebouw met grote, mooi versierde rechtszalen en prachtige tuinen. Een symbool van het grootse ideaal van wereldvrede.</p>
+<p>Vrede in Den Haag
+1899- nu: De praktijk van internationaal recht</p>
+<p>Den Haag staat bekend als de internationale hoofdstad van recht en vrede.
+Al meer dan honderd jaar zijn hier belangrijke, internationale organisaties:
+Den Haag is de thuisbasis van het Internationaal Gerechtshof, het Permanente Hof van Arbitrage en de Haagse Academie voor Internationaal Recht.
+Alle drie zijn ondergebracht in een statig gebouw, het Vredespaleis aan het Carnegieplein.
+Hoe is dat zo gekomen?
+In 1899 kwamen meer dan honderd mensen uit 26 regeringen samen in Paleis Huis ten Bosch in Den Haag.
+Het initiatief kwam van tsaar Nicolaas II en koningin Wilhelmina was de gastvrouw.
+Van over de hele wereld kwamen ze hier om afspraken te maken over bewapening, oorlogswetten en arbitrage.
+Tijdens deze Eerste Internationale Vredesconferentie werd besloten een Permanent Hof van Arbitrage op te richten.
+Dit hof zet zich in voor de vreedzame oplossing van meningsverschillen tussen landen.
+Ook al twijfelden verschillende deelnemers, toch werd de Eerste Internationale Vredesconferentie een succes.
+In 1907 werd een tweede grote conferentie georganiseerd, weer in Den Haag.
+Beide conferenties hebben veel betekend voor de ontwikkeling van internationaal recht en de wereldvrede. En ze hebben Den Haag internationale instellingen opgeleverd.
+Ook minder lang geleden kwamen er nog nieuwe organisaties bij:
+1993: het Joegoslaviëtribunaal
+1997: de Organisatie voor het Verbod op Chemische Wapens,
+2002: het Internationaal Strafhof in 2002.
+Eurojust en Europol hebben hier hun hoofdkwartier.</p>
+<p>Het hoofdkwartier van de Verenigde Naties is in New York.
+Het Internationaal Gerechtshof van de Verenigde Naties is in het Haagse Vredespaleis.</p>
+<p>Den Haag, de hele wereld in een stad</p>
+<p>Sigarettenfabriek Laurens</p>
+<p>Midden in de Binckhorst ligt de sigarettenfabriek van Edouard Laurens. De fabriek, bekend van Caballero en Lucky Strike, werd geopend in 1953 en gesloten in 1995. Veel Hagenaars hebben er hun vakantiegeld verdiend toen ze nog scholier waren. Ze stonden aan de lopende band. Deze scholieren maakten hier kennis met “gastarbeiders”, vaak Turken en Joegoslaven. Nu is de Caballerofabriek een bedrijfsverzamelgebouw voor ICT- en multimediabedrijven.</p>
+<p>Mobarak moskee Oostduinlaan</p>
+<p>Den Haag heeft de langste islamitische traditie van Nederland. Vooral uit Nederlands-Indië kwamen hier islamitische studenten en dienstboden. De Ahmadiyya-beweging (afkomstig uit India en Pakistan) liet in 1955 de Mobarak Moskee aan de Oostduinlaan bouwen. Dit is de oudste moskee in Nederland. Sindsdien zijn er veel meer moskeeën bijgekomen. In 1987 waren er zeven moskeeën, nu zijn het er bijna veertig.</p>
+<p>Sri Krishna Tempel
+Met ongeveer 45.000 mensen heeft Den Haag de grootste Hindostaanse gemeenschap in Europa. Ze komen voornamelijk uit Suriname. In Den Haag zijn er verschillende tempels waar ze hun geloof, het Hindoeïsme, kunnen uitoefenen. Dit is de Sri Krishna Dhaam hindoetempel.</p>
+<p>Gastarbeiders, ex-pats en vluchtelingen
+1945-nu: Komen en gaan</p>
+<p>In de jaren vijftig emigreerden veel Nederlanders naar Australië, Nieuw Zeeland en Canada.
+Maar er kwamen ook veel buitenlanders naar Nederland.
+Voor Den Haag is dat heel normaal.
+Want Den Haag heeft veel ambassades en internationale bedrijven als de Shell.
+Er zijn hier daarom veel diplomaten en expats.
+Deze mensen blijven hier meestal maar een paar jaar.
+In de eerste helft van de eeuw waren de meeste immigranten Duitsers.
+Maar er kwamen ook Oost-Europeanen, Spanjaarden, Italianen en Chinezen.
+In de jaren voor de oorlog zijn veel joodse families uit Duitsland gevlucht.
+Na de Tweede Wereldoorlog kwamen vooral mensen uit Indonesië naar Den Haag.
+Na 1960, toen de industrie weer begon te bloeien, waren veel arbeiders nodig.
+Veel van hen kwamen uit het Middellandse Zeegebied: uit Griekenland en Portugal, maar vooral uit Turkije en Marokko.
+Ze werden in het begin “gastarbeiders” genoemd.
+Eerst kwamen de arbeiders alleen en later volgden hun families.
+Hun kinderen en kleinkinderen wonen en werken en studeren in Den Haag.
+Oude wijken zoals Schilderswijk en Transvaal, maar ook de naoorlogse wijken in Escamp veranderden daardoor van kleur.
+Na de onafhankelijkheid van Suriname in 1975 kwamen vooral Surinaamse Hindostanen naar Den Haag.
+Ook vluchtelingen uit onveilige landen vonden hun weg naar Nederland.
+Al deze nieuwe Hagenaars hebben de stad veranderd, haar kleur gegeven en van Den Haag een bruisende internationale stad gemaakt.
+Den Haag is een stad waar de hele wereld zich thuis voelt.
+En als je je in Den Haag thuis voelt, dan ben je Hagenaar.</p>
+<p>Vragen Den Haag mijn stad</p>
+<p>Vragen over de teksten uit het boek Den Haag, mijn stad van Ruud Hisgen</p>
+<p>Let op: als je hoofdstuk 5 van het Intermediateboek maakt, hoef je de teksten over Den Haag en de vragen erbij niet te doen.</p>
+<p>Probeer de volgende vragen te beantwoorden:
+1. Waarom is Ypenburg zowel het oudste stuk Den Haag als de nieuwste wijk?
+2. Wat zochten de Romeinen in Nederland?
+3. Waarom hebben de Romeinen het kanaal de Vliet gegraven?
+4. Wat betekent de naam ‘s-Gravenhage of Die Haghe of Den Haag?
+5. Waarom emigreerden zoveel Nederlanders in de jaren vijftig naar Amerika of Australië?
+6. Hoe noemen we ’gastarbeiders’ nu?
+7. Wat betekent het als je op het zand woont en wat als je uit het veen komt?
+8. Waarom zijn er zoveel mensen uit Indonesië in Den Haag en hoe zie je dat?
+9. Wat is het verschil tussen een Hagenaar en een Hagenees?
+10. Waarom heet het Westland ook wel De Glazen Stad?</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="footnotes-and-citations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sharing-your-book.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-blocks.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
