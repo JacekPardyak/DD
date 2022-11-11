@@ -1,6 +1,5 @@
 fig:nice-fig
 tab:nice-tab
-eq:binom
 about
 usage
 render-book
@@ -14,10 +13,8 @@ parts
 footnotes-and-citations
 footnotes
 citations
-blocks
-equations
-theorems-and-proofs
-callout-blocks
+den-haag-mijn-stad---korte-geschiedenis-van-den-haag
+van-boerenhof-tot-binnenhof
 sharing-your-book
 publishing
 pages

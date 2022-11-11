@@ -12,10 +12,8 @@
 \contentsline {chapter}{\numberline {5}Footnotes and citations}{13}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Footnotes}{13}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Citations}{13}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Blocks}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Equations}{15}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Theorems and proofs}{15}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Callout blocks}{15}{section.6.3}%
+\contentsline {chapter}{\numberline {6}Den Haag, mijn stad - korte geschiedenis van Den Haag}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Van boerenhof tot Binnenhof}{15}{section.6.1}%
 \contentsline {chapter}{\numberline {7}Sharing your book}{23}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Publishing}{23}{section.7.1}%
 \contentsline {section}{\numberline {7.2}404 pages}{23}{section.7.2}%

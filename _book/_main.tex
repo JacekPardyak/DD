@@ -120,23 +120,6 @@
 \author{John Doe}
 \date{2022-11-11}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -327,43 +310,29 @@ Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YA
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
+\hypertarget{den-haag-mijn-stad---korte-geschiedenis-van-den-haag}{%
+\chapter{Den Haag, mijn stad - korte geschiedenis van Den Haag}\label{den-haag-mijn-stad---korte-geschiedenis-van-den-haag}}
 
-\hypertarget{equations}{%
-\section{Equations}\label{equations}}
+\hypertarget{van-boerenhof-tot-binnenhof}{%
+\section{Van boerenhof tot Binnenhof}\label{van-boerenhof-tot-binnenhof}}
 
-Here is an equation.
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"media/image1.jpeg"}\NormalTok{, }\AttributeTok{dpi =} \DecValTok{30}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
-
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
-
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
-
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
-
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
-
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
-
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
-
-Den Haag, mijn stad
-Korte geschiedenis van Den Haag
-
-Van boerenhof tot Binnenhof
+\includegraphics[width=12.83in]{media/image1}
 
 De oudste ``Hagenaars'' waren boeren. Ze woonden in wat nu de nieuwste wijk van Den Haag is, Ypenburg. Deze paaltjes zijn geplaatst op de plekken waar archeologen in de bodem verkleuringen hebben gevonden. Zo krijgen we een idee van de grootte van hun woning. Bij de ``boerderij'' staan drie bronzen beelden van de eerste boeren.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"media/image2.png"}\NormalTok{, }\AttributeTok{dpi =} \DecValTok{30}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=13.4in]{media/image2}
 
 De zee geeft en de zee neemt. 6000 jaar geleden lag bijna heel Den Haag nog in zee. De kust lag bij Ypenburg. Pas 1000 jaar geleden lag de kust waar die nu nog steeds ligt.
 
