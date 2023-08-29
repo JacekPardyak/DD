@@ -1,8 +1,0 @@
----
-title: "Untitled"
-format:
-  pdf:
-    template: template.tex
-applicant:
-    name: Jacek
----
