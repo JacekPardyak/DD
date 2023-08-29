@@ -1,0 +1,18 @@
+Package: resumeQ
+Type: Package
+Title: Resume and Cover Letter Builder in Quarto
+Version: 1.0
+Date: 2023-08-11
+Authors@R: c(
+  person("Jacek", "Pardyak", role = c("aut", "cre"), email = "jacek.pardyak@gmail.com")
+  )
+Maintainer: Jacek Pardyak <jacek.pardyak@gmail.com>
+Description: A suite of custom R Markdown formats and templates for
+  authoring Latex-style Resumes and Cover Letters.
+RoxygenNote: 7.2.3
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+    quarto,
+    xfun,
+    yaml
